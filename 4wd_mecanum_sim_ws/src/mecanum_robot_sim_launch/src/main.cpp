@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
                          0, 0, 0, 0, 0.25, 0,
                          0, 0, 0, 0, 0, 0.25};
                          
-  std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+  std::this_thread::sleep_for(std::chrono::milliseconds(15000));
   pub->publish(msg);
   RCLCPP_INFO(node->get_logger(), "Published initial pose");
   rclcpp::shutdown();

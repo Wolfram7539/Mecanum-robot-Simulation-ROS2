@@ -2,5 +2,5 @@
 <launch>
     <include file="$(find-pkg-share mecanum_robot_sim_launch)/launch/robot_state_publisher.launch.py"/>
     <include file="$(find-pkg-share mecanum_robot_sim_launch)/launch/navigation2.launch.py"/>
-    <node pkg="mecanum_robot_sim_launch" exec="init_pose_node" output="screen"/>
+    <!--<node pkg="mecanum_robot_sim_launch" exec="init_pose_node" output="screen"/>-->
 </launch>

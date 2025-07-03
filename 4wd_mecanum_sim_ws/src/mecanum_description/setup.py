@@ -21,8 +21,6 @@ data_files=[
     ]
 deta_files = package_files('meshes', data_files)
 data_files = package_files('urdf', data_files)
-data_files = package_files('launch', data_files)
-data_files = package_files('config', data_files)
 data_files = package_files('worlds', data_files)
 setup(
     name=package_name,

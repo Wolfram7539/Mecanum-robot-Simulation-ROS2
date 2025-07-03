@@ -27,7 +27,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+            <uri>../meshes/wheel_shaft.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -36,7 +36,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+            <uri>../meshes/wheel_shaft.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -45,7 +45,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+            <uri>../meshes/wheel_shaft.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -54,7 +54,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+            <uri>../meshes/wheel_shaft.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -84,7 +84,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+            <uri>../meshes/wheel_shaft.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -97,7 +97,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+            <uri>../meshes/wheel_shaft.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -110,7 +110,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+            <uri>../meshes/wheel_shaft.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -123,7 +123,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+            <uri>../meshes/wheel_shaft.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -197,7 +197,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/mecanum_wheel_left.STL</uri>
+            <uri>../meshes/mecanum_wheel_left.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -258,7 +258,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/mecanum_wheel_right.STL</uri>
+            <uri>../meshes/mecanum_wheel_right.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -319,7 +319,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/mecanum_wheel_right.STL</uri>
+            <uri>../meshes/mecanum_wheel_right.STL</uri>
           </mesh>
         </geometry>
         <material>
@@ -380,7 +380,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/mecanum_wheel_left.STL</uri>
+            <uri>../meshes/mecanum_wheel_left.STL</uri>
           </mesh>
         </geometry>
         <material>

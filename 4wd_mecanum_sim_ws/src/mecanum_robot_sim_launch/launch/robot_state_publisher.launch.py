@@ -115,9 +115,10 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(
                 [os.path.join(get_package_share_directory('ros_ign_gazebo'),
                               'launch', 'ign_gazebo.launch.py')]),
-            launch_arguments=[('ign_args', [' -r -v 3 ' +
-                              warehouse
-                             ])]),
+            launch_arguments={
+            'ign_args': [' -r -v 3 ' + warehouse],
+            'use_sim_time': use_sim_time
+        }.items()),
         bridge,
         map_static_tf,
         ignition_spawn_entity,
