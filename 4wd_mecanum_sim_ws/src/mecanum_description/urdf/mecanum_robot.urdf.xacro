@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<robot name="mecanum_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="PI" value="3.1415926535" />
+
+  <xacro:property name="wheel_radius" value="0.050" />
+  <xacro:property name="wheel_width" value="0.0505" />
+
+  <material name="black"><color rgba="0.1 0.1 0.1 1.0" /></material>
+  <material name="light_blue"><color rgba="0.0 0.4 0.8 1.0" /></material>
+  <material name="dark_grey"><color rgba="0.2 0.2 0.2 1.0" /></material>
+  <material name="light_grey"><color rgba="0.5 0.5 0.5 1.0" /></material>
+
+   <link name="base_footprint"></link>
+
+  <joint name="base_link_joint" type="fixed">
+    <origin xyz="0 0 0.05" rpy="0 0 0" />
+    <parent link="base_footprint"/>
+    <child link="base_link" />
+  </joint>
+
+  <link name="base_link">
+    <inertial>
+      <mass value="10.0" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.4 0.3 0.07" />
+      </geometry>
+      <material name="light_blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.4 0.3 0.07" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="wheel_front_left_shaft">
+    <inertial>
+      <origin xyz="0 0.01221 0" rpy="0 0 0"/>
+      <mass value="0.055"/>
+      <inertia
+        ixx="0.000021370" ixy="0" ixz="0"
+        iyy="0.000009966" iyz="0"
+        izz="0.000021370"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/wheel_shaft.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/wheel_shaft.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </collision>
+  </link>
+
+  <link name="wheel_front_right_shaft">
+    <inertial>
+      <origin xyz="0 0.01221 0" rpy="0 0 0"/>
+      <mass value="0.055"/>
+      <inertia
+        ixx="0.000021370" ixy="0" ixz="0"
+        iyy="0.000009966" iyz="0"
+        izz="0.000021370"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/wheel_shaft.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/wheel_shaft.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </collision>
+  </link>
+
+  <link name="wheel_rear_left_shaft">
+    <inertial>
+      <origin xyz="0 0.01221 0" rpy="0 0 0"/>
+      <mass value="0.055"/>
+      <inertia
+        ixx="0.000021370" ixy="0" ixz="0"
+        iyy="0.000009966" iyz="0"
+        izz="0.000021370"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/wheel_shaft.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/wheel_shaft.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </collision>
+  </link>
+
+  <link name="wheel_rear_right_shaft">
+    <inertial>
+      <origin xyz="0 0.01221 0" rpy="0 0 0"/>
+      <mass value="0.055"/>
+      <inertia
+        ixx="0.000021370" ixy="0" ixz="0"
+        iyy="0.000009966" iyz="0"
+        izz="0.000021370"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/wheel_shaft.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/wheel_shaft.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </collision>
+  </link>
+
+  <joint name="base_to_wheel_front_left_shaft" type="fixed">
+    <origin xyz="0.15 0.15 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_front_left_shaft"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="base_to_wheel_front_right_shaft" type="fixed">
+    <origin xyz="0.15 -0.15 0.0" rpy="${PI} 0 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_front_right_shaft"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="base_to_wheel_rear_left_shaft" type="fixed">
+    <origin xyz="-0.15 0.15 0.0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_rear_left_shaft"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  
+  <joint name="base_to_wheel_rear_right_shaft" type="fixed">
+    <origin xyz="-0.15 -0.15 0.0" rpy="${PI} 0 0"/>
+    <parent link="base_link"/>
+    <child link="wheel_rear_right_shaft"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  
+  <link name="wheel_front_left">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <mass value="0.3844"/>
+      <!-- Inertia based on cylinder -->
+      <inertia
+        ixx="0.000324824" ixy="0" ixz="0"
+        iyy="0.000480000" iyz="0"
+        izz="0.000324824"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/mecanum_wheel_left.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <link name="wheel_front_right">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <mass value="0.3844"/>
+      <!-- Inertia based on cylinder -->
+      <inertia
+        ixx="0.000324824" ixy="0" ixz="0"
+        iyy="0.000480000" iyz="0"
+        izz="0.000324824"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/mecanum_wheel_right.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="wheel_rear_left">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <mass value="0.3844"/>
+      <!-- Inertia based on cylinder -->
+      <inertia
+        ixx="0.000324824" ixy="0" ixz="0"
+        iyy="0.000480000" iyz="0"
+        izz="0.000324824"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/mecanum_wheel_right.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="wheel_rear_right">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <mass value="0.3844"/>
+      <!-- Inertia based on cylinder -->
+      <inertia
+        ixx="0.000324824" ixy="0" ixz="0"
+        iyy="0.000480000" iyz="0"
+        izz="0.000324824"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file:$(find mecanum_description)/meshes/mecanum_wheel_left.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="wheel_front_left_joint" type="continuous">
+    <origin xyz="0 0.042 0" rpy="0 0 0"/>
+    <parent link="wheel_front_left_shaft"/>
+    <child link="wheel_front_left"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="wheel_front_right_joint" type="continuous">
+    <origin xyz="0 0.042 0" rpy="0 0 0"/>
+    <parent link="wheel_front_right_shaft"/>
+    <child link="wheel_front_right"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="wheel_rear_left_joint" type="continuous">
+    <origin xyz="0 0.042 0" rpy="0 0 0"/>
+    <parent link="wheel_rear_left_shaft"/>
+    <child link="wheel_rear_left"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="wheel_rear_right_joint" type="continuous">
+    <origin xyz="0 0.042 0" rpy="0 0 0"/>
+    <parent link="wheel_rear_right_shaft"/>
+    <child link="wheel_rear_right"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="lidar_joint" type="fixed">
+    <origin xyz="0 0 0.035" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base_scan"/>
+  </joint>
+
+  <link name="base_scan">
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.05"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <origin xyz="0.15 0 0.035" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="camera_rgb_frame"/>
+  </joint>
+
+  <link name="camera_rgb_frame">
+    <inertial>
+      <mass value="0.2"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <material name="light_grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo>
+    <plugin name="mecanum_robot_controller" filename="libignition_gazebo6-mecanum-drive-system.so">
+      <front_left_joint>wheel_front_left_joint</front_left_joint>
+      <front_right_joint>wheel_front_right_joint</front_right_joint>
+      <back_left_joint>wheel_rear_left_joint</back_left_joint>
+      <back_right_joint>wheel_rear_right_joint</back_right_joint>
+      <wheelbase>0.3</wheelbase>
+      <wheel_separation>0.35</wheel_separation>
+      <wheel_radius>${wheel_radius}</wheel_radius>
+      <topic>cmd_vel</topic>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin
+      filename="ignition-gazebo-odometry-publisher-system"
+      name="ignition::gazebo::systems::OdometryPublisher">
+      <odom_publish_frequency>50</odom_publish_frequency>
+      <odom_topic>/odom</odom_topic>
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+      <tf_topic>/odom/tf</tf_topic>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin filename="libignition-gazebo-joint-state-publisher-system.so" 
+      name="ignition::gazebo::systems::JointStatePublisher">
+      <topic>joint_states</topic>
+    </plugin>
+  </gazebo>
+</robot>
+

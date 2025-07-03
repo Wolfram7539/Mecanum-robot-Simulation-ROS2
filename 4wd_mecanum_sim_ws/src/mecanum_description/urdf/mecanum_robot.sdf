@@ -1,0 +1,571 @@
+<?xml version='1.0?>
+<sdf version='1.7'>
+  <model name='mecanum_robot' >
+    <link name='base_footprint'>
+      <inertial>
+        <pose>0.002747 0 0.052244 0 -0 0</pose>
+        <mass>10.92</mass>
+        <inertia>
+          <ixx>0.121677</ixx>
+          <ixy>0</ixy>
+          <ixz>-0.000982692</ixz>
+          <iyy>0.12521</iyy>
+          <iyz>2.16107e-14</iyz>
+          <izz>0.130242</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_footprint_fixed_joint_lump__base_link_collision'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.3 0.07</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__wheel_front_left_shaft_collision_1'>
+        <pose>0.15 0.15 0.05 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__wheel_front_right_shaft_collision_2'>
+        <pose>0.15 -0.15 0.05 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__wheel_rear_left_shaft_collision_3'>
+        <pose>-0.15 0.15 0.05 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__wheel_rear_right_shaft_collision_4'>
+        <pose>-0.15 -0.15 0.05 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__camera_collision_5'>
+        <pose>0.15 0 0.085 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      
+      <visual name='base_footprint_fixed_joint_lump__base_link_visual'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.3 0.07</size>
+          </box>
+        </geometry>
+        <material>
+        <ambient>0.0 0.4 0.8 1.0</ambient>
+        <diffuse>0.0 0.4 0.8 1.0</diffuse>
+        </material> 
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__wheel_front_left_shaft_visual_1'>
+        <pose>0.15 0.15 0.05 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <ambient>0.5 0.5 0.5 1.0</ambient>
+        <diffuse>0.5 0.5 0.5 1.0</diffuse>
+        </material> 
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__wheel_front_right_shaft_visual_2'>
+        <pose>0.15 -0.15 0.05 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <ambient>0.5 0.5 0.5 1.0</ambient>
+        <diffuse>0.5 0.5 0.5 1.0</diffuse>
+        </material> 
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__wheel_rear_left_shaft_visual_3'>
+        <pose>-0.15 0.15 0.05 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <ambient>0.5 0.5 0.5 1.0</ambient>
+        <diffuse>0.5 0.5 0.5 1.0</diffuse>
+        </material> 
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__wheel_rear_right_shaft_visual_4'>
+        <pose>-0.15 -0.15 0.05 3.14159 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/wheel_shaft.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <ambient>0.5 0.5 0.5 1.0</ambient>
+        <diffuse>0.5 0.5 0.5 1.0</diffuse>
+        </material> 
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__camera_visual_5'>
+        <pose>0.15 0 0.085 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+        <material>
+        <ambient>0.5 0.5 0.5 1.0</ambient>
+        <diffuse>0.5 0.5 0.5 1.0</diffuse>
+        </material> 
+      </visual>
+      
+    </link>
+    <joint name='wheel_front_left_joint' type='revolute'>
+      <pose relative_to='base_footprint'>0.15 0.192 0.05 0 -0 0</pose>
+      <parent>base_footprint</parent>
+      <child>wheel_front_left</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_front_left'>
+      <pose relative_to='wheel_front_left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.3844</mass>
+        <inertia>
+          <ixx>0.000324824</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00048</iyy>
+          <iyz>0</iyz>
+          <izz>0.000324824</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_front_left_collision'>
+        <pose>0 0 0 1.5708 -0 0</pose>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu><mu2>0.0</mu2>
+              <fdir1 ignition:expressed_in="base_footprint">1 -1 0</fdir1>
+            </ode>
+          </friction>
+        </surface>
+        <geometry>
+          <cylinder>
+            <length>0.0505</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='wheel_front_left_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/mecanum_wheel_left.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <ambient>0.2 0.2 0.2 1.0</ambient>
+        <diffuse>0.2 0.2 0.2 1.0</diffuse>
+        </material> 
+      </visual>
+    </link>
+    <joint name='wheel_front_right_joint' type='revolute'>
+      <pose relative_to='base_footprint'>0.15 -0.192 0.05 0 -0 0</pose>
+      <parent>base_footprint</parent>
+      <child>wheel_front_right</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_front_right'>
+      <pose relative_to='wheel_front_right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.3844</mass>
+        <inertia>
+          <ixx>0.000324824</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00048</iyy>
+          <iyz>0</iyz>
+          <izz>0.000324824</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_front_right_collision'>
+        <pose>0 0 0 1.5708 -0 0</pose>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu><mu2>0.0</mu2>
+              <fdir1 ignition:expressed_in="base_footprint">1 1 0</fdir1>
+            </ode>
+          </friction>
+        </surface>
+        <geometry>
+          <cylinder>
+            <length>0.0505</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='wheel_front_right_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/mecanum_wheel_right.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <ambient>0.2 0.2 0.2 1.0</ambient>
+        <diffuse>0.2 0.2 0.2 1.0</diffuse>
+        </material> 
+      </visual>
+    </link>
+    <joint name='wheel_rear_left_joint' type='revolute'>
+      <pose relative_to='base_footprint'>-0.15 0.192 0.05 0 -0 0</pose>
+      <parent>base_footprint</parent>
+      <child>wheel_rear_left</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_rear_left'>
+      <pose relative_to='wheel_rear_left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.3844</mass>
+        <inertia>
+          <ixx>0.000324824</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00048</iyy>
+          <iyz>0</iyz>
+          <izz>0.000324824</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_rear_left_collision'>
+        <pose>0 0 0 1.5708 -0 0</pose>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu><mu2>0.0</mu2>
+              <fdir1 ignition:expressed_in="base_footprint">1 1 0</fdir1>
+            </ode>
+          </friction>
+        </surface>
+        <geometry>
+          <cylinder>
+            <length>0.0505</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='wheel_rear_left_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/mecanum_wheel_right.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <ambient>0.2 0.2 0.2 1.0</ambient>
+        <diffuse>0.2 0.2 0.2 1.0</diffuse>
+        </material> 
+      </visual>
+    </link>
+    <joint name='wheel_rear_right_joint' type='revolute'>
+      <pose relative_to='base_footprint'>-0.15 -0.192 0.05 0 -0 0</pose>
+      <parent>base_footprint</parent>
+      <child>wheel_rear_right</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_rear_right'>
+      <pose relative_to='wheel_rear_right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.3844</mass>
+        <inertia>
+          <ixx>0.000324824</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00048</iyy>
+          <iyz>0</iyz>
+          <izz>0.000324824</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_rear_right_collision'>
+        <pose>0 0 0 1.5708 -0 0</pose>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu><mu2>0.0</mu2>
+              <fdir1 ignition:expressed_in="base_footprint">1 -1 0</fdir1>
+            </ode>
+          </friction>
+        </surface>
+        <geometry>
+          <cylinder>
+            <length>0.0505</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='wheel_rear_right_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:/home/wolfram/4wd_mecanum_sim_ws/install/mecanum_description/share/mecanum_description/meshes/mecanum_wheel_left.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+        </material> 
+      </visual>
+    </link>
+
+    <link name="imu_link">
+      <sensor name="imu" type="imu">
+        <always_on>1</always_on>
+        <update_rate>200</update_rate>
+        <visualize>true</visualize>
+        <topic>imu</topic>
+        <ignition_frame_id>imu_link</ignition_frame_id>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>2e-4</stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>1.7e-2</stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
+    </link>
+    <joint name="imu_joint" type="fixed">
+      <pose>0 0 0.75 0 0 0</pose>
+      <parent>base_footprint</parent>
+      <child>imu_link</child>
+    </joint>
+
+    <!-- LIDAR -->
+    <link name="base_scan">
+      <pose>0 0 0.085 0 0 0</pose>
+      <collision name='base_footprint_fixed_joint_lump__lidar_collision_6'>
+        <geometry>
+          <cylinder>
+            <length>0.05</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='base_footprint_fixed_joint_lump__lidar_visual_6'>
+        <geometry>
+          <cylinder>
+            <length>0.05</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+        <ambient>0.1 0.1 0.1 1.0</ambient>
+        <diffuse>0.1 0.1 0.1 1.0</diffuse>
+        </material> 
+      </visual>
+      <sensor name="gpu_lidar" type="gpu_lidar">
+        <pose>0 0 0.15 0 0 0</pose>
+        <topic>scan</topic>
+        <ignition_frame_id>base_scan</ignition_frame_id>
+        <update_rate>20</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>0</min_angle>
+              <max_angle>6.28</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.120000</min>
+            <max>100.0</max>
+            <resolution>0.015000</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </ray>
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+      </sensor>
+    </link>
+    <joint name="lidar_joint" type="fixed">
+      <pose>0 0 0.085 0 0 0</pose>
+      <parent>base_footprint</parent>
+      <child>base_scan</child>
+    </joint>
+
+    <link name="camera_rgb_frame">
+      <pose>0.15 0.0 0.2 0 0 0</pose>
+      <sensor name="camera" type="camera">
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+        <update_rate>30</update_rate>
+        <camera_info_topic>/camera/rgb/camera_info</camera_info_topic>
+        <topic>/camera/rgb/image_raw</topic>
+        <ignition_frame_id>camera_rgb_frame</ignition_frame_id>
+        <camera name="intel_realsense_r200">
+          <horizontal_fov>1.02974</horizontal_fov>
+          <image>
+            <width>1920</width>
+            <height>1080</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.02</near>
+            <far>300</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <!-- Noise is sampled independently per pixel on each frame.
+                  That pixel's noise value is added to each of its color
+                  channels, which at that point lie in the range [0,1]. -->
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+      </sensor>
+    </link>
+    <joint name="camera_rgb_joint" type="fixed">
+      <parent>base_footprint</parent>
+      <child>camera_rgb_frame</child>
+      <pose>0.15 0.0 0.15 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <plugin filename="libignition-gazebo-mecanum-drive-system.so"
+        name="ignition::gazebo::systems::MecanumDrive">
+      <front_left_joint>wheel_front_left_joint</front_left_joint>
+      <front_right_joint>wheel_front_right_joint</front_right_joint>
+      <back_left_joint>wheel_rear_left_joint</back_left_joint>
+      <back_right_joint>wheel_rear_right_joint</back_right_joint>
+      <wheelbase>0.3</wheelbase>
+      <wheel_separation>0.35</wheel_separation>
+      <wheel_radius>0.05</wheel_radius>
+      <topic>cmd_vel</topic>
+    </plugin>
+    <plugin name='ignition::gazebo::systems::OdometryPublisher' filename='ignition-gazebo-odometry-publisher-system'>
+      <odom_publish_frequency>50</odom_publish_frequency>
+      <odom_topic>/odom</odom_topic>
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>base_footprint</robot_base_frame>
+      <tf_topic>/odom/tf</tf_topic>
+    </plugin>
+    <static>0</static>
+    <plugin name='ignition::gazebo::systems::JointStatePublisher' filename='libignition-gazebo-joint-state-publisher-system.so'>
+      <topic>joint_states</topic>
+    </plugin>
+  </model>
+</sdf>
